@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fni-kN-CZK">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Weather View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="WeatherViewController" customModule="Weather4Cast" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="weather4castimage" translatesAutoresizingMaskIntoConstraints="NO" id="EoN-vj-XA1">
+                                <rect key="frame" x="0.0" y="-613.5" width="414" height="1509.5"/>
+                            </imageView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l5z-Bg-YKb">
+                                <rect key="frame" x="0.0" y="-613.5" width="414" height="1509.5"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="7WG-k1-3ta">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="1509.5"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <blurEffect style="regular"/>
+                            </visualEffectView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="l5z-Bg-YKb" firstAttribute="top" secondItem="EoN-vj-XA1" secondAttribute="top" id="4QC-dW-74j"/>
+                            <constraint firstItem="EoN-vj-XA1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="7pg-P3-4xW"/>
+                            <constraint firstItem="l5z-Bg-YKb" firstAttribute="bottom" secondItem="EoN-vj-XA1" secondAttribute="bottom" id="D4t-dh-7zf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="EoN-vj-XA1" secondAttribute="trailing" id="cg5-cS-lCg"/>
+                            <constraint firstAttribute="bottom" secondItem="EoN-vj-XA1" secondAttribute="bottom" id="cz2-jA-OlT"/>
+                            <constraint firstItem="EoN-vj-XA1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="-701.5" id="eJK-2x-Q0Q"/>
+                            <constraint firstItem="l5z-Bg-YKb" firstAttribute="trailing" secondItem="EoN-vj-XA1" secondAttribute="trailing" id="oDx-vL-kAI"/>
+                            <constraint firstItem="l5z-Bg-YKb" firstAttribute="leading" secondItem="EoN-vj-XA1" secondAttribute="leading" id="uxQ-a8-WKs"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ujc-or-Vug"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="108.48214285714285"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ZLf-fT-DCT">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fni-kN-CZK" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="g58-Jh-8JH">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="P6n-6i-UyD"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0hQ-Xo-bGN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="108.48214285714285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="weather4castimage" width="250" height="375"/>
+    </resources>
+</document>
